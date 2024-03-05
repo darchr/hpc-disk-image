@@ -1,0 +1,12 @@
+diff --git a/util/m5/src/abi/arm/SConsopts b/util/m5/src/abi/arm/SConsopts
+index 49762ad491..72922685bc 100644
+--- a/util/m5/src/abi/arm/SConsopts
++++ b/util/m5/src/abi/arm/SConsopts
+@@ -29,5 +29,7 @@ env['ABI'] = 'arm'
+ get_abi_opt('CROSS_COMPILE', 'arm-linux-gnueabihf-')
+ get_abi_opt('QEMU_ARCH', 'arm')
+ env.Append(CXXFLAGS=[ '-march=armv7-a', '-mfpu=neon' ])
++env.Append(CXXFLAGS='-DM5OP_ADDR=0x10010000')
++env.Append(CCFLAGS='-DM5OP_ADDR=0x10010000')
+ 
+ env['CALL_TYPE']['inst'].impl('m5op.S', 'verify_inst.cc', default=True)

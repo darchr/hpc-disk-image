@@ -1,9 +1,10 @@
 #!/bin/sh
 
 cd $HOME
-git clone simple-vectorizable-microbenchmarks
-cd simple-vectorizable-microbenchmarks/
+git clone https://github.com/darchr/simple-vectorizable-benchmarks
+cd simple-vectorizable-benchmarks/
 git pull
+git checkout arm+kvm
 git clone https://github.com/nlohmann/json
 cd json
 git checkout v3.11.2

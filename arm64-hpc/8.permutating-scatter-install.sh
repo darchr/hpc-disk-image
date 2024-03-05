@@ -1,8 +1,9 @@
 #!/bin/sh
 
 cd $HOME
-git clone https://github.com/takekoputa/simple-vectorizable-microbenchmarks
-cd simple-vectorizable-microbenchmarks
+git clone https://github.com/darchr/simple-vectorizable-benchmarks
+cd simple-vectorizable-benchmarks
+git checkout arm+kvm
 git pull
 cd permutating_scatter
 make -f makefiles/Makefile-hw clean

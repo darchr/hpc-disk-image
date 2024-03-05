@@ -32,6 +32,11 @@
             "destination": "/home/ubuntu/benchmark-configs/"
         },
         {
+            "type": "file",
+            "source": "arm64-hpc/patches/gem5/0001-m5op-arm-kvm-addr-fix.patch",
+            "destination": "/home/ubuntu/"
+        },
+        {
             "type": "shell",
             "execute_command": "{{.Vars}} bash '{{.Path}}'",
             "scripts":
